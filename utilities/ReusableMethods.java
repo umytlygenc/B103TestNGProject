@@ -214,9 +214,6 @@ public class ReusableMethods {
             assertTrue("Element not visible: " + element, element.isDisplayed());
         } catch (NoSuchElementException e) {
             Assert.fail("Element not found: " + element);
-
-
-
         }
     }
 }

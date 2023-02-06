@@ -1,4 +1,5 @@
 package techproed.tests;
+import org.testng.SkipException;
 import org.testng.annotations.*;
 public class Day19_TestNGAnnotations {
     /*
@@ -22,10 +23,12 @@ public class Day19_TestNGAnnotations {
     NOT : default prioriry nin degeri 0 a esittir
     @Test = @Test(priority = 0)
      */
-    @BeforeSuite
+   /* @BeforeSuite
     public void beforeSuite(){
         System.out.println("Before Suite");
-    }
+
+    */
+
     @BeforeTest
     public void beforeTest(){
         System.out.println("Before Test");
@@ -58,7 +61,7 @@ public class Day19_TestNGAnnotations {
     public void afterMethod(){
         System.out.println("After Method");
     }
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "regression-tests")
     public void test7(){
         System.out.println("Test 7");
     }
@@ -66,7 +69,7 @@ public class Day19_TestNGAnnotations {
     public void test2(){
         System.out.println("Test 2");
     }
-    @Test(enabled = false)
+    @Test(enabled = false,groups = "regression-tests")
     public void test3(){
         System.out.println("Test 3");
     }
